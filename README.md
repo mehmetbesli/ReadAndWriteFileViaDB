@@ -2,5 +2,5 @@
 
 ### 1-) We can read text file and write to the Database
 ### 2-) We can read database and write to the text file
-### 2-) We can read excel file and write to the Database
-### 3-) We can read database and write to the excel file
+### 3-) We can read excel file and write to the Database
+### 4-) We can read database and write to the excel file
