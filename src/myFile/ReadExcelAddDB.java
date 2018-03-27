@@ -57,7 +57,6 @@ public class ReadExcelAddDB {
 				getConnection();
 
 				try {
-
 					String sql = "INSERT INTO Users (username, password, fullname, email) VALUES (?, ?, ?, ?)";
 
 					PreparedStatement statement = conn.prepareStatement(sql);
