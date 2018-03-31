@@ -52,11 +52,10 @@ public class ReadDBAddExcel {
 				System.out.println("Could not connect to DB");
 				throw new SQLException("Database baðlanamadý");
 			}
-
 			String sql = "SELECT * FROM users";
-
 			statement = conn.createStatement();
 			result = statement.executeQuery(sql);
+			
 			int count = 0;
 			// Create blank workbook
 			workbook = new XSSFWorkbook();
@@ -65,7 +64,6 @@ public class ReadDBAddExcel {
 			// Write the workbook in file system
 			out = new FileOutputStream(
 					new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\file2.xlsx"));
-
 			// Create row object
 			XSSFRow row;
 			int rowid = 0;
@@ -107,8 +105,6 @@ public class ReadDBAddExcel {
 			if (out != null) {
 				out.close();
 			}
-
 		}
-
 	}
 }

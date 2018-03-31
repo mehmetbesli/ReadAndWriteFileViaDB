@@ -30,18 +30,16 @@ public class ReadDBWriteText {
 		String url = "jdbc:mysql://localhost:3306/sampledb";
 		String username = "root";
 		String password = "besli";
-
 		Connection conn = DriverManager.getConnection(url, username, password);
-
+		
 		String sql = "SELECT * FROM users";
-
 		statement = conn.createStatement();
+		
 		result = statement.executeQuery(sql);
 		if (conn != null) {
 			System.out.println("Connected to the database sampledb");
 		}
 		int count = 0;
-
 		while (result.next()) {
 			name = result.getString("username");
 			pass = result.getString("password");
@@ -50,12 +48,10 @@ public class ReadDBWriteText {
 
 			String output = "%d: %s - %s - %s - %s";
 			System.out.println(String.format(output, ++count, name, pass, fullname, email));
-
 			try {
 				FileWriter writer = new FileWriter(
 						"D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\file.txt", true);
 				bufferedWriter = new BufferedWriter(writer);
-
 				bufferedWriter.write(name + ",");
 				bufferedWriter.write(pass + ",");
 				bufferedWriter.write(fullname + ",");
@@ -67,8 +63,6 @@ public class ReadDBWriteText {
 			} finally {
 				bufferedWriter.close();
 			}
-
 		}
 	}
-
 }

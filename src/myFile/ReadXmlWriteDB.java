@@ -37,18 +37,14 @@ public class ReadXmlWriteDB {
 			doc.getDocumentElement().normalize();
 
 			System.out.println("Name of Xml Data:" + doc.getDocumentElement().getNodeName());
-
 			NodeList nList = doc.getElementsByTagName("list");
-
 			System.out.print("----------------------------");
 
 			for (int temp = 0; temp < nList.getLength(); temp++) {
-
 				Node nNode = nList.item(temp);
 				System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
 					Element eElement = (Element) nNode;
 
 					name = eElement.getElementsByTagName("username").item(0).getTextContent();
@@ -62,7 +58,6 @@ public class ReadXmlWriteDB {
 					System.out.println("Fullname : " + fullname);
 					System.out.println("Email : " + email);
 				}
-
 				try {
 					String url = "jdbc:mysql://localhost:3306/sampledb";
 					String username = "root";
@@ -76,13 +71,11 @@ public class ReadXmlWriteDB {
 					System.out.println("user/password is invalid");
 					ex.printStackTrace();
 				}
-
 				st = conn.createStatement();
 				int i = st.executeUpdate("insert into users (username,password,fullname,email) values('" + name + "','"
 						+ pass + "','" + fullname + "','" + email + "')");	
 		           System.out.println("Data is successfully inserted!");
-			}
-			
+			}	
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

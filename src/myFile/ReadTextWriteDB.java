@@ -30,14 +30,11 @@ public class ReadTextWriteDB {
 
 				if (lineStr.equals("username,password,fullname,email"))
 					continue;
-
 				ar = lineStr.split(",");
 
 				databaseConn();
-
 				try {
 					String sql = "INSERT INTO Users (username, password, fullname, email) VALUES (?, ?, ?, ?)";
-
 					PreparedStatement statement = conn.prepareStatement(sql);
 					statement.setString(1, ar[0]);
 					statement.setString(2, ar[1]);
@@ -75,5 +72,4 @@ public class ReadTextWriteDB {
 			ex.printStackTrace();
 		}
 	}
-
 }

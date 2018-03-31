@@ -27,7 +27,6 @@ public class ReadExcelAddDB {
 	}
 
 	private void readExcelAndWriteDatabase() throws IOException, SQLException {
-
 		FileInputStream excelFile = null;
 		Workbook workbook = null;
 		try {
@@ -37,13 +36,11 @@ public class ReadExcelAddDB {
 			Iterator<Row> rowIterator = datatypeSheet.iterator();
 
 			while (rowIterator.hasNext()) {
-
 				Row currentRow = rowIterator.next();
 				Iterator<Cell> cellIterator = currentRow.iterator();
 
 				String[] cellArray = new String[4];
 				int index = 0;
-
 				while (cellIterator.hasNext()) {
 					Cell currentCell = cellIterator.next();
 					if (currentCell == null)
@@ -55,10 +52,8 @@ public class ReadExcelAddDB {
 					continue;
 				}
 				getConnection();
-
 				try {
 					String sql = "INSERT INTO Users (username, password, fullname, email) VALUES (?, ?, ?, ?)";
-
 					PreparedStatement statement = conn.prepareStatement(sql);
 					statement.setString(1, cellArray[0]);
 					statement.setString(2, cellArray[1]);
@@ -95,7 +90,6 @@ public class ReadExcelAddDB {
 			String url = "jdbc:mysql://localhost:3306/sampledb";
 			String username = "root";
 			String password = "besli";
-
 			conn = DriverManager.getConnection(url, username, password);
 			if (conn != null) {
 				System.out.println("Connected to the database sampledb");
