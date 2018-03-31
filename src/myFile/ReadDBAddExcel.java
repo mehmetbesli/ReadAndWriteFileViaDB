@@ -63,7 +63,7 @@ public class ReadDBAddExcel {
 			spreadsheet = workbook.createSheet();
 			// Write the workbook in file system
 			out = new FileOutputStream(
-					new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\file2.xlsx"));
+					new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\excelFile2.xlsx"));
 			// Create row object
 			XSSFRow row;
 			int rowid = 0;

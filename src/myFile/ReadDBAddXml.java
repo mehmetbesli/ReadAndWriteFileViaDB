@@ -63,7 +63,7 @@ public class ReadDBAddXml {
 		}
 
 		try {
-			File file = new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\file2.xml");
+			File file = new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\xmlfile2.xml");
 			JAXBContext jaxbContext = JAXBContext.newInstance(Users.class);
 			Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 			// output pretty printed

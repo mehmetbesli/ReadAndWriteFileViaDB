@@ -18,7 +18,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcelAddDB {
 
-	private static final String myFile = "D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\data2.xlsx";
+	private static final String myFile = "D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\excelFile.xlsx";
 	static Connection conn = null;
 
 	public static void main(String[] args) throws IOException, SQLException {

@@ -29,7 +29,7 @@ public class ReadXmlWriteDB {
 	public static void main(String argv[]) {
 
 		try {
-			File fXmlFile = new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\file.xml");
+			File fXmlFile = new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\xmlFile.xml");
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			Document doc = dBuilder.parse(fXmlFile);
