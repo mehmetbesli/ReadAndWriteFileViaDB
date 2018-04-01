@@ -50,7 +50,7 @@ public class ReadDBWriteText {
 			System.out.println(String.format(output, ++count, name, pass, fullname, email));
 			try {
 				FileWriter writer = new FileWriter(
-						"D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\textFile2.txt", true);
+						"D:\\Desktop\\eclipse-workspace\\git\\ReadAndWriteFileViaDB\\resources\\textFile2.txt", true);
 				bufferedWriter = new BufferedWriter(writer);
 				bufferedWriter.write(name + ",");
 				bufferedWriter.write(pass + ",");

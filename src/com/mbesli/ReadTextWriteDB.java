@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 public class ReadTextWriteDB {
 
-	static File file = new File("D:\\Desktop\\eclipse-workspace\\ReadAndFileWrite\\resources\\textFile.txt");
+	static File file = new File("D:\\Desktop\\eclipse-workspace\\git\\ReadAndWriteFileViaDB\\resources\\textFile.txt");
 	public Connection conn;
 
 	public static void main(String[] args) throws IOException, SQLException {
