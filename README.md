@@ -1,4 +1,4 @@
-## what can we do  in this project;
+## what can we do with the project;
 
 ### 1-) We can read text file and write this text file to the Database
 ### 2-) We can read database and write this data to the text file
